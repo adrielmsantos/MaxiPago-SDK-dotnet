@@ -66,8 +66,17 @@ namespace MaxiPago.DataContract.Transactional
         /// Gets or sets the pix.
         /// </summary>
         /// <value>The pix.</value>
-        [XmlElement("boleto")]
+        [XmlElement("pix")]
         public Pix Pix { get; set; }
+
+        /// <summary>
+        /// Shoulds the serialize boleto.
+        /// </summary>
+        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        public bool ShouldSerializePix()
+        {
+            return Pix != null;
+        }
 
         /// <summary>
         /// Shoulds the serialize boleto.
