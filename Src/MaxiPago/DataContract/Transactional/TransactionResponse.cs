@@ -145,6 +145,20 @@ namespace MaxiPago.DataContract.Transactional
         public string AuthenticationUrl { get; set; }
 
         /// <summary>
+        /// Gets or sets the EMV (copia e cola).
+        /// </summary>
+        /// <value>The authentication URL.</value>
+        [XmlElement("emv")]
+        public string Emv { get; set; }
+
+        /// <summary>
+        /// Gets or sets the Image (base 64)
+        /// </summary>
+        /// <value>The authentication URL.</value>
+        [XmlElement("imagem_base64")]
+        public string ImagemBase64 { get; set; }
+
+        /// <summary>
         /// Gets or sets the save on file.
         /// </summary>
         /// <value>The save on file.</value>
@@ -156,7 +170,6 @@ namespace MaxiPago.DataContract.Transactional
         /// </summary>
         /// <value>The online debit URL.</value>
         //[XmlElement("partiallyApprovedAmount")]
-        //public string PartiallyApprovedAmount { get; set; }
         [XmlElement("onlineDebitUrl")]
         public string OnlineDebitUrl { get; set; }
     }
